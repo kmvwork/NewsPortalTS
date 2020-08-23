@@ -1,0 +1,110 @@
+.header {
+    height: 120px;
+    .logo_link {
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: -0.44px;
+        text-decoration: none;
+    }
+    .menu {
+        width: 50%;
+        height: 67px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        list-style-type: none;
+        background-color: #38383a;
+        padding: 0;
+        border-radius: 6px;
+        &_link {
+            text-decoration: none;
+            color: #888888;
+            font-family: 'Merriweather Sans', sans-serif; 
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3.64px;
+            transition: all linear .3s;
+            &:hover {
+                color:#4b77be;
+            }
+            &:active {
+                color:red;
+            }
+        }
+    }
+    .active_link {
+        color: #ffffff;
+        font-weight: 700;
+        &:hover {
+            color:#4b77be;
+        }
+        &:active {
+            color:red;
+        }
+    }
+    .hamburger {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px) {
+            .menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 50%;
+                height: 100vh !important;
+                flex-direction: column;
+                background-color: rgba(0,0,0, 0.8) !important;
+                justify-content: center !important;
+                transition: 0.6s all;
+                z-index: 10;
+                &_active {
+                    left: 0;
+                }
+                &_item {
+                    margin-bottom: 20px;
+                }
+                &_link {
+                    font-size: 25px !important;
+                }
+            }
+            .hamburger {
+                position: fixed !important;
+                z-index: 5;
+                display: block !important;
+                width: 50px;
+                height: 24;
+                position: absolute;
+                right: 35px;
+                top: 60px;
+                transform: translateY(-50%);
+                span {
+                    display: block;
+                    margin-bottom: 5px;
+                    height: 3px;
+                    width: 100%;
+                    background-color: rgb(87, 83, 83);
+                    transition: 0.6s all;
+                }
+                &_active {
+                    span {
+                        margin: -2px;
+                        &:nth-child(1) {
+                            transform: translateY(5px) rotate(-45deg);
+                        }
+                        &:nth-child(2) {
+                            display: none;;
+                        }
+                        &:nth-child(3) {
+                            transform: translateY(5px) rotate(45deg);
+                        }
+                    }
+                }
+            }    
+}

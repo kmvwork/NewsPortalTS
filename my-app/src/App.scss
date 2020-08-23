@@ -1,0 +1,43 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #2e2e30;
+}
+
+.container {
+    max-width: 1320px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    grid-area: btn;
+    background-color: rgb(59, 51, 51);
+}
+.footer {
+    grid-area: footer;
+    background-color: #2e2e30;
+}
+
+@import './components/header/header';
+@import './components/main/main';
+@import './components/news/news';
+@import './components/news/accordion';
+@import './components/load/load';
+@import './components/footer/footer';
+
+
+
+
+
+
