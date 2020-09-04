@@ -1,23 +1,32 @@
 import React from "react";
 
-type MainPromoProps = {
-  imgPromo: string;
-  promoTitle: string;
-  promoTheme: string;
-  promoDesc: string;
+type elementsProps = {
+  elements: any[];
 };
 
-const MainPromoItem = (props: MainPromoProps) => {
+const MainPromoItem = (props: elementsProps) => {
   return (
-    <div className="main_promo_item">
-      <img src={`../../../img/${props.imgPromo}`} alt="" className="main-img" />
-      <div className="main_promo_theme bg-lifestyle">{props.promoTheme}</div>
-      <div className="main_promo_title text-overflow-2">{props.promoTitle}</div>
-      <div className="main_promo_desc text-overflow-2">{props.promoDesc}</div>
-      <a href="#" className="main_promo_link">
-        READ MORE
-      </a>
-    </div>
+    <>
+      {props.elements.map((item) => {
+        return (
+          <div key={item.id} className={`main_promo_item ${ item.active === "true" ? " active_item" : " "  } `}>
+          <img src={item.imgPromo} alt="" className="main-img" />
+          <div className="main_promo_theme bg-lifestyle">
+            {item.promoTheme}
+          </div>
+          <div className="main_promo_title text-overflow-2">
+            {item.promoTitle}
+          </div>
+          <div className="main_promo_desc text-overflow-2">
+            {item.promoDesc}
+          </div>
+          <a href="#" className="main_promo_link">
+            READ MORE
+          </a>
+        </div>
+        )
+      })}
+    </>
   );
 };
 

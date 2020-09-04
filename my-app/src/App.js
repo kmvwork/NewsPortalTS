@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <Main /> 
+      <Main />
       <News />
       <Load />
       <Footer />
