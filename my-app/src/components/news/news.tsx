@@ -1,18 +1,13 @@
 import React from "react";
-import post1 from "../../img/post_1.jpg";
-import post2 from "../../img/post_2.png";
-import post3 from "../../img/post_3.jpg";
-import post4 from "../../img/post_4.jpg";
-import slide1 from "../../img/slide_1.jpg";
-import slide2 from "../../img/slide_2.jpg";
-import slide3 from "../../img/slide_3.jpg";
-import slide4 from "../../img/slide_4.jpg";
-import post7 from "../../img/post_7.jpg";
 import NewsItem from "./newsItem/newsItem";
 import NewsItemSlider from "./newsItem/newsSlider/newsSlider";
 import NewsItemAccordion from "./newsItem/newsAccordion/newsAccordion";
 
 const News = () => {
+
+
+  
+
   return (
     <div className="news container">
       <NewsItem
