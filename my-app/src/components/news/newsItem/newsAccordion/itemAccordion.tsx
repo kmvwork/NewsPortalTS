@@ -22,30 +22,6 @@ type ItemAccordionProps = {
 
 const ItemAccordion = (props: ItemAccordionProps) => {
   return (
-//     <div className="accordion-item">
-//       <input
-//         className="accordion-item-input"
-//         type="radio"
-//         name="accordion"
-//         id= {`accordion-${props.id}`}
-//         checked = {props.checked}
-//       />
-//       <label className="accordion-item-trigger" htmlFor={`accordion-${props.id}`}>
-//   <span className="accordion-theme">{props.accTheme}</span>
-//         <p className="accordion-title overflow">
-//           {props.accTitle}
-//         </p>
-//         <i className="arrow right"></i>
-//       </label>
-//       <div className=" accordion-item-open">
-//         <p className="accordion-text text-overflow-5">
-//           {props.accText}
-          
-//         </p>
-//         <img src={props.accImg} alt="" className="accordion-img" />
-//       </div>
-//     </div>
-
 
 <AccordionItem uuid={props.id}>
     <AccordionItemHeading className="accordion-item">
